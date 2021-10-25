@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sala</title>
+    <script src="/webjars/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="stiles.css" media="screen"/>
+    <script src="js/registroUser.js"></script>
+    <script src="js/loginUser.js"></script>
+    <script src="js/room.js"></script>
+    <script src="js/app.js"></script>
+
+</head>
+<body onload="app.loadInfoSala()">
+    <form style="display: block" id="tablaJugadores">
+        <h1 id="funca"> funca </h1>
+        <h2 id="name"> Nombre jugador</h2>
+        <h1 id="id">id user</h1>
+        <h1 id="numeroUsers"></h1>
+        <button type="button" id="jugar" onclick="app.empezarPartida()">Empezar partida</button>
+    </form>
+
+    <form style="display: block" id = "jugar-mapa">
+        <canvas id="canvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+        <div id="container"></div>
+        <script src="src/phaser.min.js"></script>
+        <script src="src/scenes/init.js" type="module"></script>
+    </form>
+
+</body>
+</html>
